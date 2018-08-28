@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.xml.bind.SchemaOutputResolver;
+
 import static java.lang.Double.parseDouble;
 import static java.lang.Integer.parseInt;
 
@@ -32,6 +34,9 @@ public class HomeController {
 
             int result = bmiCalculator.woman(parseInt(first_number),parseInt(second_number));
             map.put("result", result);
+            System.out.println(result);
+
+
         }
         if (options.equals("man")) {
             int result = bmiCalculator.man(parseInt(first_number),parseInt(second_number));
